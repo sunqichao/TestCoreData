@@ -5,6 +5,6 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SQCEntity" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SQCEntity" positionX="-405" positionY="-189" width="128" height="75"/>
     </elements>
 </model>

@@ -15,4 +15,7 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * title;
 
++ (NSFetchedResultsController *)fetchedResultsController;
+
+
 @end

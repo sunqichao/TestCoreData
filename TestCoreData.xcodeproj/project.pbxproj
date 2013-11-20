@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7399C13183C62B50035F756 /* SQCFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7399C12183C62B50035F756 /* SQCFetchedResultsController.m */; };
 		E7B01586183B50090089CD7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B01585183B50090089CD7F /* Foundation.framework */; };
 		E7B01588183B50090089CD7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B01587183B50090089CD7F /* CoreGraphics.framework */; };
 		E7B0158A183B50090089CD7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B01589183B50090089CD7F /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7399C11183C62B50035F756 /* SQCFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQCFetchedResultsController.h; path = SQCFetchedResultsController/SQCFetchedResultsController.h; sourceTree = "<group>"; };
+		E7399C12183C62B50035F756 /* SQCFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQCFetchedResultsController.m; path = SQCFetchedResultsController/SQCFetchedResultsController.m; sourceTree = "<group>"; };
 		E7B01582183B50090089CD7F /* TestCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B01585183B50090089CD7F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7B01587183B50090089CD7F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7399C0A183C60380035F756 /* CoreDataFetchedResults */ = {
+			isa = PBXGroup;
+			children = (
+				E7399C11183C62B50035F756 /* SQCFetchedResultsController.h */,
+				E7399C12183C62B50035F756 /* SQCFetchedResultsController.m */,
+			);
+			name = CoreDataFetchedResults;
+			sourceTree = "<group>";
+		};
 		E7B01579183B50090089CD7F = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +135,7 @@
 		E7B0158D183B50090089CD7F /* TestCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				E7399C0A183C60380035F756 /* CoreDataFetchedResults */,
 				E7B01596183B50090089CD7F /* AppDelegate.h */,
 				E7B01597183B50090089CD7F /* AppDelegate.m */,
 				E7B0159C183B50090089CD7F /* Images.xcassets */,
@@ -266,6 +279,7 @@
 				E7B0159B183B50090089CD7F /* TestCoreData.xcdatamodeld in Sources */,
 				E7B01594183B50090089CD7F /* main.m in Sources */,
 				E7B015C6183B52C10089CD7F /* SQCEntity.m in Sources */,
+				E7399C13183C62B50035F756 /* SQCFetchedResultsController.m in Sources */,
 				E7B015C2183B50990089CD7F /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +481,7 @@
 				E7B015B6183B500A0089CD7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7B015B7183B500A0089CD7F /* Build configuration list for PBXNativeTarget "TestCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +490,7 @@
 				E7B015B9183B500A0089CD7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

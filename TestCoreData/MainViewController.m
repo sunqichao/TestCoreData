@@ -67,16 +67,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"cell";
+    id cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
+        Class someClass = NSClassFromString(@"UITableViewCell");
+        
+        cell = [[someClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
     }
     
     // Configure the cell...
     
     SQCEntity *data = [_fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = data.name;
+    UITableViewCell *cellss = (UITableViewCell *)cell;
+    cellss.textLabel.text = data.name;
     
     return cell;
 }
@@ -142,19 +148,7 @@
         return _fetchedResultsController;
     }
     
-    //创建一个查询请求
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    //查询条件
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"SQCEntity" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    //查询排序，必须的
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
-    //设置查询的个数
-    [fetchRequest setFetchBatchSize:20];
-    //创建一个赋给全局的，然后就可以自动运作了，霍霍
-    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-    self.fetchedResultsController = theFetchedResultsController;
+        self.fetchedResultsController = [SQCEntity fetchedResultsController];
     _fetchedResultsController.delegate = self;
     
     return _fetchedResultsController;
