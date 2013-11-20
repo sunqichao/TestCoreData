@@ -31,7 +31,7 @@
 
 @end
 
-@interface SQCFetchedResultsController : NSObject<UITableViewDataSource,UITableViewDelegate>
+@interface SQCFetchedResultsController : NSObject<UITableViewDataSource,UITableViewDelegate,NSFetchedResultsControllerDelegate>
 
 //控制数据自动更新的fetchedresultsController
 @property (nonatomic ,strong) NSFetchedResultsController *sqcFetchedResultsController;

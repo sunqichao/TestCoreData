@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SQCFetchedResultsController.h"
 
-@interface MainViewController : UITableViewController<NSFetchedResultsControllerDelegate>
+@interface MainViewController : UITableViewController<NSFetchedResultsControllerDelegate,SQCFetchedResultsDelegate>
 
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 
